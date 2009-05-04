@@ -1,6 +1,0 @@
-<h3 class="caps">Profile</h3>
-<div class="box">
-	<% if logged_in? && current_user.facebook_user?%>
-		<fb:profile-pic uid="<%= current_user.fb_user_id%>" facebook-logo="false" size="thumb" ></fb:profile-pic>
-	<% end %>
-</div>

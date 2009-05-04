@@ -1,6 +1,0 @@
-<h3 class="caps">Friends</h3>
-<div class="box">
-	<% if logged_in? && current_user.facebook_user?%>
-		Show friends
-	<% end %>
-</div>
