@@ -1,19 +1,21 @@
-<h1>Welcome to Rails Magazine (html)</h1>
-<p>Interact with the Rails Magazine community, stay upto date with announcements, 
-news, polls, quizzes and much more. 
-Visit Rails Magazine's official website at http://www.railsmagazine.com</p>
-<% if logged_in? %>
-	<h2>You are logged in as <%= current_user.name %></h2>
-	<% if current_user.facebook_user? %>
-		<fb:profile-pic uid="<%= current_user.fb_user_id%>" facebook-logo="false" size="thumb" ></fb:profile-pic>
-		<p><a href="#" onclick='FB.Connect.logoutAndRedirect("/logout")'>Logout</a></p>
-	<% else %>
-		<p>why don't you connect with your facebook account</p>
-		<%= fb_login_button('window.location = "/users/link_user_accounts";')%>
-		<p><%= link_to 'Logout', logout_path%></p>
-	<% end %>
-<% else %>
-	<h2>You are not logged in!</h2>
-	<p><%= link_to 'Signup', signup_path%> or <%= link_to 'Login', login_path%></p>
-<% end %>
+<div class="container showgrid">
+	<div id="header" class="span-24">
+		<%= render :partial => "shared/header" %>
+	</div>
+	<div id="horznavbar" class="span-24">
+		<%= render :partial => "shared/horznavbar" %>
+	</div>	
+	<div id="lftsidebar" class="span-4">
+		<%= render :partial => "shared/welcome" %>
+	</div>
+	<div id="main" class="span-16">
+		Main content
+	</div>
+	<div id="rhtsidebar" class="span-4 last">
+		Right sidebar
+	</div>
+	<div id="footer" class="span-24">
+		<%= render :partial => "shared/footer" %>
+	</div>
+</div>
 
