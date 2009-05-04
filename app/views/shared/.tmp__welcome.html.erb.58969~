@@ -1,5 +1,6 @@
 <% if logged_in? %>
 	<% if current_user.facebook_user? %>
+		<fb:profile-pic uid="<%= current_user.fb_user_id%>" facebook-logo="false" size="thumb" ></fb:profile-pic>
 		<span>Welcome, <%= current_user.name %> </span> | 
 		<a href="#" onclick='FB.Connect.logoutAndRedirect("/logout")'>Logout</a>
 	<% else %>

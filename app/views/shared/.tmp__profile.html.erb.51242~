@@ -1,0 +1,6 @@
+<h3 class="caps">Profile</h3>
+<div class="box">
+	<% if logged_in? && current_user.facebook_user?%>
+		Show profile
+	<% end %>
+</div>

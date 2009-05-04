@@ -1,0 +1,6 @@
+<h3 class="caps">Profile</h3>
+<div class="box">
+	<% if logged_in? %>
+		Show profile
+	<% end %>
+</div>
