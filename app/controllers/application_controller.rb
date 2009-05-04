@@ -2,9 +2,19 @@
 # Likewise, all the methods added will be available for all controllers.
 
 class ApplicationController < ActionController::Base
+ 
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
+  
+  # Your application users will need to have added the application in facebook to access all 
+  # of facebooker‘s features. 
+  layout 'index'
+  before_filter :set_facebook_session
+  helper_method :facebook_session
+
+  # Be sure to include AuthenticationSystem in Application Controller instead
+  include AuthenticatedSystem
 end

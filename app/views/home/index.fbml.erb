@@ -1,0 +1,8 @@
+<h1>Welcome to Rails Magazine (fbml)</h1>
+<p>Interact with the Rails Magazine community, stay upto date with announcements, 
+news, polls, quizzes and much more. 
+Visit Rails Magazine's official website at http://www.railsmagazine.com
+</p>
+Hi <%= fb_name(@facebook_user) -%>!
+Check out your app at <%= link_to(url =  url_for(:controller =>  params[:controller ], :action => params[:action], :only_path => false), url  ) %>
+Try from the web <%= link_to(url =  url_for(:controller =>  params[:controller ], :action => params[:action], :canvas => false, :only_path => false), url  ) %>
