@@ -11,14 +11,14 @@
 development:
   api_key: 068958e9557643f7f10ae22080a4897d
   secret_key: 864e45f267cb0ce7e57b73dda8bb1eaa
-  canvas_page_name: 
-  callback_url: http://localhost:3001/
+  canvas_page_name: railsmagazine
+  callback_url: http://www.showcaseideas.com:12002/
   pretty_errors: true
   set_asset_host_to_callback_url: true
   tunnel:
-    public_host_username: 
-    public_host: 
-    public_port: 4007
+    public_host_username: showcase
+    public_host: www.showcaseideas.com
+    public_port: 12002
     local_port: 3001
     server_alive_interval: 0
 

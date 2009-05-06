@@ -41,8 +41,8 @@ production:
   adapter: mysql
   encoding: utf8
   reconnect: false
-  database: fbRailsMag_production
+  database: showcase_fbRailsMag
   pool: 5
-  username: root
-  password: 
+  username: showcase_devuser
+  password: devuser
   host: localhost
